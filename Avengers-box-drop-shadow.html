@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container
+        {
+            display: flex;
+            
+      flex-wrap: wrap;
+          
+            background-color: rgb(3, 3, 58);
+              width:100%;
+
+        }
+       .child
+        {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            /* filter:drop-shadow(10px 7px 20px orange); */
+            
+        }
+        .child:first-of-type:hover
+        {
+            
+            filter:drop-shadow(10px 7px 20px rgb(252, 252, 252));
+          
+        }
+        .child:nth-child(2):hover
+        {
+            
+            filter:drop-shadow(10px 7px 20px yellow);
+          
+        }
+        .child:nth-child(3):hover
+        {
+            
+            filter:drop-shadow(10px 7px 20px orange);
+          
+        }
+        .child:nth-child(4):hover
+        {
+            
+            filter:drop-shadow(10px 7px 20px rgb(56, 221, 23));
+          
+        }
+        .child:nth-child(5):hover
+        {
+            
+            filter:drop-shadow(10px 7px 20px rgb(255, 1, 158));
+          
+        }
+        .child:nth-child(6):hover
+        {
+            
+            filter:drop-shadow(10px 7px 20px rgb(240, 105, 16));
+          
+        }
+        /* .child:nth-of-type(2)
+        {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 10px 7px 20px orange;;
+            flex-grow: 2;
+        } */
+         /* .child:nth-of-type(2)
+        {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 10px 7px 20px orange;;
+            flex-grow: 2;
+        } */
+     /*centering secod row css*/
+      .second-row
+      {
+  
+        background-color: rgb(3, 3, 58);
+              width:100%;
+              height: 400px;
+      }
+      .box
+      {
+        border-radius: 8px;
+        border:10px solid white;
+        height: 250px;
+        width:450px;
+        position: relative;
+        top:50%;
+        left: 50%;
+        
+       transform: translateX(-50%) translateY(-50%);/*To middle*/
+
+       
+      }
+/*hover css*/
+.third-row
+      {
+  
+        background-color: rgb(3, 3, 58);
+              width:100%;
+              height: 300px;
+              display: flex;
+      justify-content: space-between;
+      align-items: center;
+    position: relative;
+      
+             
+      }
+      .third-row .box{
+        width:30px;
+        height: 30px;
+        background:orange;border: none;
+        box-shadow: 3px 6px 10px white;
+       
+        box-sizing: border-box;
+        position: relative;
+      left:0;
+      top:0;
+       margin-left: 20px;
+       flex-shrink:3 ;
+      }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="child"><img src="img/spiderman-removebg-preview.png" alt="spider"></div>
+        <div class="child"><img src="img/909-9096287_parent-directory-batman-removebg-preview.png" alt="batman"></div>
+        <div class="child"><img src="img/dfmim82-5cb7fb35-67ab-4ce0-8df4-a85c32b7d624-removebg-preview.png" alt="hulk"></div>
+        <div class="child"><img src="img/IronMan-AvengersMk43-AOU-removebg-preview.png" alt="ironman"></div>
+        <div class="child"><img src="img/superman-png-from-pngfre-2-688x1024-removebg-preview.png" alt="super"></div>
+        <div class="child"><img src="img/Thanos-removebg-preview.png" alt="thanos"></div>
+    </div>
+    <div class="second-row"><div class="box"></div></div>
+    <div class="third-row">
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+    </div>
+    
+</body>
+</html>

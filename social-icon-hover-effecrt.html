@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        .item a
+        {
+            width:4.9rem;
+            height: 4.8rem;
+            background-color: #f0f9fe;
+            border:3px solid #f0f9fe;
+            overflow: hidden;
+            z-index:1;
+        }
+        .item a:before
+        {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-color: red;
+            z-index: 0;
+            scale: 1 0;
+            transform-origin: bottom;
+            transition: scale 0.5s ease;
+        }
+        .item:hover align-self:before{
+
+            scale:1 1;
+
+        }
+        .icon{
+            font-size: 2rem;
+            color:hsl(203,92%,8%);
+            transition: 0.5 ease;
+            z-index: 2;
+
+        }
+        .item a:hover .icon{
+            color:#fff;
+            transform: rotateY('360deg');
+        }
+        .item:nth-child(2)
+        {
+            background-color: green;
+        }
+        .item:nth-child(3)
+        {
+            background-color: rgb(87, 116, 87);
+        }
+        .item:nth-child(4)
+        {
+            background-color: rgb(3, 34, 3);
+        }
+        .item:nth-child(5)
+        {
+            background-color: rgb(144, 160, 144);
+        }
+        .item:nth-child(6)
+        {
+            background-color: rgb(41, 255, 41);
+        }
+        
+    </style>
+</head>
+
+<body>
+    <div>
+        <ul>
+            <li class="item">
+                <a href="#">
+                    <i class="icon fa-brands fa-instagram"></i>
+                </a>
+            </li>
+            <li class="item">
+                <a href="#">
+                    <i class="icon fa-brands fa-instagram"></i>
+                </a>
+            </li>
+            <li class="item">
+                <a href="#">
+                    <i class="icon fa-brands fa-twitter"></i>
+                </a>
+            </li>
+            <li class="item">
+                <a href="#">
+                    <i class="icon fa-brands fa-youtube"></i>
+                </a>
+            </li>
+            <li class="item">
+                <a href="#">
+                    <i class="icon fa-brands fa-snapchat"></i>
+                </a>
+            </li>
+            <li class="item">
+                <a href="#">
+                    <i class="icon fa-brands fa-whatsapp"></i>
+                </a>
+            </li>
+        </ul>
+    </div>
+</body>
+
+</html>

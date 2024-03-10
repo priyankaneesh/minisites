@@ -4,104 +4,141 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Document</title>   <title>Socials - 01</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+    <link rel="stylesheet" href="styles.css">
     <style>
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
 
-        .item a
-        {
-            width:4.9rem;
-            height: 4.8rem;
-            background-color: #f0f9fe;
-            border:3px solid #f0f9fe;
-            overflow: hidden;
-            z-index:1;
-        }
-        .item a:before
-        {
-            content: "";
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            background-color: red;
-            z-index: 0;
-            scale: 1 0;
-            transform-origin: bottom;
-            transition: scale 0.5s ease;
-        }
-        .item:hover align-self:before{
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-            scale:1 1;
+html,
+body {
+  display: grid;
+  height: 100%;
+  width: 100%;
+  font-family: "Poppins", sans-serif;
+  place-items: center;
+  /* background: linear-gradient(315deg, #ffffff, #d7e1ec); */
+  background-image: linear-gradient(to right, black, rgb(21, 21, 41));
+}
 
-        }
-        .icon{
-            font-size: 2rem;
-            color:hsl(203,92%,8%);
-            transition: 0.5 ease;
-            z-index: 2;
+.wrapper {
+  display: inline-flex;
+  list-style: none;
+}
 
-        }
-        .item a:hover .icon{
-            color:#fff;
-            transform: rotateY('360deg');
-        }
-        .item:nth-child(2)
-        {
-            background-color: green;
-        }
-        .item:nth-child(3)
-        {
-            background-color: rgb(87, 116, 87);
-        }
-        .item:nth-child(4)
-        {
-            background-color: rgb(3, 34, 3);
-        }
-        .item:nth-child(5)
-        {
-            background-color: rgb(144, 160, 144);
-        }
-        .item:nth-child(6)
-        {
-            background-color: rgb(41, 255, 41);
-        }
-        
+.wrapper .icon {
+  position: relative;
+  background: #ffffff;
+  border-radius: 50%;
+  padding: 15px;
+  margin: 10px;
+  width: 50px;
+  height: 50px;
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.wrapper .tooltip {
+  position: absolute;
+  top: 0;
+  font-size: 14px;
+  background: #ffffff;
+  color: #ffffff;
+  padding: 5px 8px;
+  border-radius: 5px;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.wrapper .tooltip::before {
+  position: absolute;
+  content: "";
+  height: 8px;
+  width: 8px;
+  background: #ffffff;
+  bottom: -3px;
+  left: 50%;
+  transform: translate(-50%) rotate(45deg);
+  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.wrapper .icon:hover .tooltip {
+  top: -45px;
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.wrapper .icon:hover span,
+.wrapper .icon:hover .tooltip {
+  text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.1);
+}
+
+.facebook {
+  --color: #1877f2;
+}
+.twitter {
+  --color: #1da1f2;
+}
+.instagram {
+  --color: #e4405f;
+}
+.github {
+  --color: #333333;
+}
+.youtube {
+  --color: #cd201f;
+}
+
+.icon:hover,
+.icon:hover .tooltip,
+.icon:hover .tooltip::before {
+  background: var(--color);
+  color: white;
+}
     </style>
 </head>
 
 <body>
     <div>
-        <ul>
-            <li class="item">
-                <a href="#">
-                    <i class="icon fa-brands fa-instagram"></i>
-                </a>
-            </li>
-            <li class="item">
-                <a href="#">
-                    <i class="icon fa-brands fa-instagram"></i>
-                </a>
-            </li>
-            <li class="item">
-                <a href="#">
-                    <i class="icon fa-brands fa-twitter"></i>
-                </a>
-            </li>
-            <li class="item">
-                <a href="#">
-                    <i class="icon fa-brands fa-youtube"></i>
-                </a>
-            </li>
-            <li class="item">
-                <a href="#">
-                    <i class="icon fa-brands fa-snapchat"></i>
-                </a>
-            </li>
-            <li class="item">
-                <a href="#">
-                    <i class="icon fa-brands fa-whatsapp"></i>
-                </a>
-            </li>
-        </ul>
+        <body>
+            <ul class="wrapper">
+              <li class="icon facebook">
+                <span class="tooltip">Facebook</span>
+                <span><i class="fab fa-facebook-f"></i></span>
+              </li>
+              <li class="icon twitter">
+                <span class="tooltip">Twitter</span>
+                <span><i class="fab fa-twitter"></i></span>
+              </li>
+              <li class="icon instagram">
+                <span class="tooltip">Instagram</span>
+                <span><i class="fab fa-instagram"></i></span>
+              </li>
+              <li class="icon github">
+                <span class="tooltip">Github</span>
+                <span><i class="fab fa-github"></i></span>
+              </li>
+              <li class="icon youtube">
+                <span class="tooltip">Youtube</span>
+                <span><i class="fab fa-youtube"></i></span>
+              </li>
+            </ul>
+          </body>
     </div>
 </body>
 

@@ -1,0 +1,95 @@
+/* media queries */
+body{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+@media(min-width: 700px){
+    .profile{
+        width: 690px;
+        margin: 80px auto;
+        display: flex;
+        gap: 20px;
+        align-items: center;
+    }
+    .user{
+        width: 260px;
+        height: 230px;
+        object-fit: cover;
+        border-radius: 16px;
+        transition: .5s;
+    }
+    .user:hover{
+        transform: rotate(4deg) scale(1.1);
+
+        border-radius: 22px;
+    }
+    .btn{
+        transition: 1s;
+        background-color: black;
+        color: white;
+        padding: 14px 30px;
+        font-size: 16px;
+        border-radius: 12px;
+        border: 2px solid black;
+    }
+    .btn:hover{
+        background-color: white;
+        color: black;
+        border: 2px solid black;
+    }
+    .title{
+        margin-top: 0;
+    } 
+}
+@media(max-width: 699px){
+    .profile{
+        margin: 80px auto;
+        text-align: center;
+    }
+    .user{
+        width: 160px;
+        height: 160px;
+        object-fit: cover;
+        border-radius: 50%;
+        transition: .5s;
+    }
+    .btn{
+        background-color: rgb(255, 0, 0);
+        color: white;
+        padding: 16px 30px;
+        font-size: 16px;
+        border-radius: 120px;
+        border: none;
+    }
+    .title{
+        margin-top: 20px;
+    } 
+}
+
+
+/* @media(min-width)
+/* @media(max-width)
+
+*/
+
+
+.demo{
+    margin-top: 200px;
+    width: 0px;
+    height: 0px;
+    background-color: orangered;
+    animation-name: msd;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+@keyframes msd{
+    from{}
+    to{
+       margin-left: 800px; 
+       background-color: blueviolet;
+       border-radius: 50%;
+       width: 80px;
+        height: 80px;
+    }
+}
